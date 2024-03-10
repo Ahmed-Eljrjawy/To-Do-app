@@ -55,12 +55,12 @@ ul {
   background-color: var(--Very-Dark-Blue);
 
   .background {
-    background-image: url(/images/bg-desktop-dark.jpg);
+    background-image: url(images/bg-desktop-dark.jpg);
   }
   .container {
     .heading button .modeImg {
       transition: all 0.3s ease-in-out;
-      content: url(/images/icon-sun.svg);
+      content: url(images/icon-sun.svg);
     }
     .inputContainer input {
       color: var(--text-task);
@@ -88,7 +88,7 @@ ul {
 }
 .background {
   object-fit: cover;
-  background-image: url(/images/bg-desktop-light.jpg);
+  background-image: url(images/bg-desktop-light.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -129,7 +129,7 @@ button:hover {
       background-color: transparent;
       border: none;
       .modeImg {
-        content: url(/images/icon-moon.svg);
+        content: url(images/icon-moon.svg);
       }
     }
   }
