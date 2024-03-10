@@ -1,4 +1,5 @@
 const modeButton = document.querySelector(".modeButton");
+const modeButton2 = document.querySelector(".buttonIsDark");
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
 const infoMobile = document.querySelector(".infoFilter--mobile");
@@ -19,9 +20,11 @@ const clearCompleted = () => document.querySelector(".clearCompleted");
 
 const modeHandler = () => {
   body.classList.toggle("darkIsActive");
+
   saveToDB("darkmodeFlag", body.classList.contains("darkIsActive"));
 };
 modeButton.addEventListener("click", modeHandler);
+modeButton2.addEventListener("click", modeHandler);
 // const initTaskListeners = () => {
 //   cross().forEach((element, index) => {
 //     element.addEventListener("click", () => deleteTask(index));

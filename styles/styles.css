@@ -24,7 +24,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // transition: all 0.2s ease-in;
+  /* transition: all 0.2s ease-in; */
 }
 html {
   font-size: 10px;
@@ -35,7 +35,6 @@ body {
   font-weight: 400;
   background-color: var(--bg-light-gray);
   overflow-x: hidden;
-  // overflow-y: scroll;
 }
 img {
   width: 100%;
@@ -51,16 +50,17 @@ ul {
 .darkIsActive {
   --background: var(--Very-Dark-Desaturated-Blue);
   --text-task: var(--Very-Light-Gray);
-  // transition: all 0.3s ease-in-out;
+  /* // transition: all 0.3s ease-in-out; */
   background-color: var(--Very-Dark-Blue);
 
-  .background {
-    background-image: url(images/bg-desktop-dark.jpg);
-  }
   .container {
-    .heading button .modeImg {
-      transition: all 0.3s ease-in-out;
-      content: url(images/icon-sun.svg);
+    .heading {
+      .modeButton {
+        display: none;
+      }
+      .buttonIsDark {
+        display: block;
+      }
     }
     .inputContainer input {
       color: var(--text-task);
@@ -87,10 +87,6 @@ ul {
   }
 }
 .background {
-  object-fit: cover;
-  background-image: url(images/bg-desktop-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
   z-index: -1;
   height: 25rem;
@@ -103,6 +99,12 @@ button {
   background-color: transparent;
   border: none;
   transition: all 0.2s ease-in-out;
+}
+.modeButton {
+  display: block;
+}
+.buttonIsDark {
+  display: none;
 }
 .filterButton:hover,
 button:hover {
@@ -128,9 +130,6 @@ button:hover {
     button {
       background-color: transparent;
       border: none;
-      .modeImg {
-        content: url(images/icon-moon.svg);
-      }
     }
   }
   .square {
@@ -184,7 +183,7 @@ button:hover {
       p {
         text-decoration: line-through;
         opacity: 0.5;
-        // transition: none;
+        /* // transition: none; */
       }
     }
     li {
