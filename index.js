@@ -70,9 +70,11 @@ const renderTasks = (tasks) => {
   // console.log(CompletedLength.length);
   if (!taskList) {
     dragDrop.style.display = "none";
+    infoMobile.style.display = "none";
   }
   if (taskList) {
     dragDrop.style.display = "block";
+    infoMobile.style.display = "flex";
 
     taskList += ` <div class="info">
     <span>items left <span class="numberOfTasks">${CompletedLength.length}</span></span>
